@@ -1,0 +1,22 @@
+.about-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
+    background-image:url(../assets/Your\ paragraph\ text\ \(1\).png) ;
+  }
+  
+  .about-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-icon {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  

@@ -1,0 +1,78 @@
+/* Footer container */
+.footer-temp {
+  position: relative;
+  background-color: #333;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  width: 100%;
+  margin-top: auto; /* Pushes footer to the bottom */
+  bottom: 0; /* Ensure it's at the bottom */
+}
+
+/* Content inside the footer */
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content p {
+  font-size: 1em;
+  margin: 5px 0;
+}
+
+/* Social media links styling */
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icon {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #ff0000;
+}
+
+/* Responsive adjustments for screens under 768px */
+@media (max-width: 768px) {
+  .footer-content {
+    padding: 0 10px;
+  }
+
+  .footer-content p {
+    font-size: 0.9em;
+  }
+
+  .social-icon {
+    font-size: 1.3em;
+  }
+}
+
+/* More responsive adjustments for small screens under 480px */
+@media (max-width: 480px) {
+  .footer-temp {
+    padding: 10px 0;
+  }
+
+  .footer-content p {
+    font-size: 0.85em;
+  }
+
+  .social-links {
+    gap: 10px;
+  }
+
+  .social-icon {
+    font-size: 1.2em;
+  }
+}

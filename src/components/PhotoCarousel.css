@@ -1,0 +1,54 @@
+/* PhotoCarousel.css */
+.swiper {
+    width: 50%;
+    max-width: 768px; /* Adjust for responsiveness */
+    height: auto;
+  }
+  
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Adjust to prevent excessive stretching */
+    object-fit: cover;
+    border-radius: 10px; /* Smooth rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .swiper-slide img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  /* Navigation Buttons */
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #fff; /* Change arrow colors */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: background 0.3s ease;
+  }
+  
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Pagination Dots */
+  .swiper-pagination-bullet {
+    background: #fff;
+    opacity: 0.7;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: #007bff; /* Active dot color */
+    opacity: 1;
+  }
+  
