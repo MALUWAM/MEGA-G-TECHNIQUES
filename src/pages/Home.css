@@ -122,6 +122,25 @@
   background-color: rgba(255, 0, 0, 0.1);
 }
 
+/* Scroll animation effect */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animate.visible {
+  opacity: 1.2;
+  transform: translateY(0);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+
 /* =========================== */
 /* RESPONSIVE DESIGN ADJUSTMENTS */
 /* =========================== */

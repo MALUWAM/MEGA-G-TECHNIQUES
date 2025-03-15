@@ -88,7 +88,7 @@ body {
   position: absolute;
   top: 60px;
   right: 20px;
-  background-color: #6c2197;
+  background-color: #347d9e;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -102,7 +102,7 @@ body {
   font-weight: bold;
 }
 .mobile-menu a:hover {
-  background-color: #b485ff;
+  background-color: #45a4cf;
 }
 /* Media Query for screens between 800px and 1750px */
 @media (max-width: 1750px) and (min-width: 800px) {
