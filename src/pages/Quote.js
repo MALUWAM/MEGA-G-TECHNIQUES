@@ -38,20 +38,6 @@ const Quote = () => {
 
         <button type="submit">Get Quote</button>
       </form>
-
-      <section className="contact-map">
-        <h1>Find Us Here</h1>
-        <iframe
-          title="Google Maps Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50794.49819010439!2d25.588679182055575!3d-25.843973567632936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ea2cb10a0a7aeaf%3A0xb93978569f8f9d26!2s2696%20James%20Watt%20Cres%2C%20Mafikeng%20Industrial%2C%20Mahikeng%2C%202745!5e1!3m2!1sen!2sza!4v1741326150967!5m2!1sen!2sza" 
-          referrerpolicy="no-referrer-when-downgrade"
-          width="100%"
-          height="300"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-        ></iframe>
-      </section>
     </div>
   )
 }
