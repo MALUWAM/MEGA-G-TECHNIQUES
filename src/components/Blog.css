@@ -2,6 +2,7 @@
 .blog-section {
     padding: 40px 5%;
     text-align: center;
+
   }
   
   .title {
@@ -19,7 +20,7 @@
   
   /* Blog Card */
   .blog-card {
-    background: #fff;
+    background: #eaeaea;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);

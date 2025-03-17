@@ -38,8 +38,6 @@ const Home = () => {
       <section>
         <div className="container">
         <h1 className="title">MEGA G TECHNIQUES</h1>
-
-          <h1 className="title">Service</h1>
           <div className="services">
             <div className="service-list scroll-animate">
               <ul>

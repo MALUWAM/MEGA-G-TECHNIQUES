@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import "./Blog.css"; // Import the CSS file
 
+import One from "../assets/mega-g-tech/HomeAutomation.jpg"
+import Two from "../assets/mega-g-tech/solar_infograph.png"
+import Three from "../assets/mega-g-tech/3DPrinting.png"
+
 const Blog = () => {
   const [expandedPost, setExpandedPost] = useState(null);
 
@@ -15,7 +19,7 @@ const Blog = () => {
 
         {/* Blog Post 1 - Smart Home Automation */}
         <div className="blog-card">
-          <img src="https://via.placeholder.com/300" alt="Smart Home Automation" />
+          <img src={One} alt="Smart Home Automation" />
           <div className="blog-content">
             <h2>Understanding Smart Home Automation</h2>
             <p>
@@ -40,9 +44,9 @@ const Blog = () => {
 
         {/* Blog Post 2 - Solar Solutions */}
         <div className="blog-card">
-          <img src="https://via.placeholder.com/300" alt="Solar Solutions" />
+          <img src={Two} alt="Solar Solutions" />
           <div className="blog-content">
-            <h2>Top 5 Solar Solutions for Your Home</h2>
+            <h2>Solar Solutions for Your Home</h2>
             <p>
               Discover how <strong>solar energy solutions</strong> can lower electricity costs while promoting sustainability...  
             </p>
@@ -64,7 +68,7 @@ const Blog = () => {
 
         {/* Blog Post 3 - 3D Printing */}
         <div className="blog-card">
-          <img src="https://via.placeholder.com/300" alt="3D Printing" />
+          <img src={Three} alt="3D Printing" />
           <div className="blog-content">
             <h2>3D Printing: The Future of Manufacturing</h2>
             <p>
