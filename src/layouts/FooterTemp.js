@@ -7,7 +7,7 @@ function FooterTemp() {
   return (
     <footer className="footer-temp">
       <div className="footer-content">
-        <p>&copy; 2024 MEGA G TECHNIQUES. All rights reserved.</p>
+        <p className='footer-content-p'>&copy; 2024 MEGA G TECHNIQUES. All rights reserved.</p>
         <div className="social-links">
           <a href="https://www.facebook.com" className="social-icon">
             <FaFacebook />

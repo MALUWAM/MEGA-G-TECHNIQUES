@@ -2,7 +2,6 @@
 .footer-temp {
   position: relative;
   background-color: #333;
-  color: white;
   padding: 15px 0;
   text-align: center;
   width: 100%;
@@ -10,7 +9,7 @@
   bottom: 0; /* Ensure it's at the bottom */
 }
 
-p{
+.footer-content-p{
   color: white;
 }
 
