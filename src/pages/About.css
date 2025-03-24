@@ -10,6 +10,8 @@
   background-attachment: fixed;
   color: #fff;
   animation: fadeIn 1.5s ease-in-out;
+  box-sizing: border-box; /* Ensures padding doesn't affect overall width */
+  width: 100%; /* Ensure full width for smaller screens */
 }
 
 /* Section Styling */
@@ -62,11 +64,13 @@ p {
   line-height: 1.6;
 }
 
+/* Partner Logos */
 .partner-logos {
   display: flex;
   justify-content: center;
   gap: 20px;
   margin-top: 15px;
+  flex-wrap: wrap; /* Ensures logos wrap on smaller screens */
 }
 
 .partner-logos img {
@@ -79,7 +83,6 @@ p {
 .partner-logos img:hover {
   transform: scale(1.1); /* Slight zoom effect */
 }
-
 
 /* Animations */
 @keyframes fadeIn {
@@ -99,5 +102,70 @@ p {
   to {
       opacity: 1;
       transform: translateY(0);
+  }
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 1rem;
+  }
+
+  .about-section {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2em; /* Smaller font size for the title */
+  }
+
+  h2 {
+    font-size: 1.5em; /* Smaller subheadings */
+  }
+
+  p {
+    font-size: 1em; /* Smaller paragraph text */
+  }
+
+  .about-icon {
+    font-size: 2rem; /* Smaller icons */
+  }
+
+  .partner-logos {
+    justify-content: space-around; /* Space logos evenly */
+    margin-top: 10px;
+  }
+
+  .partner-logos img {
+    width: 100px; /* Adjust logo size for smaller screens */
+  }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+  .about-container {
+    padding: 0.5rem; /* Reduce padding for smaller screens */
+  }
+
+  h1 {
+    font-size: 1.8em; /* Even smaller title */
+  }
+
+  h2 {
+    font-size: 1.3em; /* Even smaller subheadings */
+  }
+
+  p {
+    font-size: 0.9em; /* Smaller text */
+  }
+
+  .about-icon {
+    font-size: 1.8rem; /* Even smaller icons */
+  }
+
+  .partner-logos img {
+    width: 80px; /* Adjust logo size for extra small screens */
   }
 }

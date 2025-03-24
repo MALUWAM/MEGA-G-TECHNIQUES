@@ -33,7 +33,7 @@ const Services = () => {
   }, []);
 
   return (
-    <section className="services">
+    <section className="ourServices">
       <h1 className="title">MEGA G TECHNIQUES</h1>
       <div className="service-grid">
         {/* Electrical Solutions */}

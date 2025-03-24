@@ -1,5 +1,7 @@
 /* General styling for the services section */
-.services {
+
+
+.ourServices {
   font-family: Arial, sans-serif;
   min-height: 100vh;
   display: flex;
@@ -8,6 +10,7 @@
   align-items: center;
   text-align: center;
   padding: 5vh 5%;
+  background-image:url(../assets/Your\ paragraph\ text\ \(1\).png) ;
 }
 
 /* Title Styling */
