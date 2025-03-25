@@ -84,9 +84,9 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section class="image-section">
-        <img src="your-image.jpg" alt="Description of Image"/>
-    </section>
+      {/* <section class="image-section">
+        <img src="" alt="Description of Image" />
+    </section> */}
     <section className="introduction">
       <div className="intro-text">
         <p>
@@ -104,7 +104,8 @@ const Home = () => {
         </p>
       </div>
       <div className="intro-slider">
-        <img src={images[currentImage]} alt="Sliding showcase" className="intro-img" />
+        <img src={images[currentImage]} alt="Showcase" className="intro-img" />
+
       </div>
     </section>
       <Blog/>
