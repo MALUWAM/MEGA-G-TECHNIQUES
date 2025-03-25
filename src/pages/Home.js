@@ -1,7 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css"; // Import CSS for styling
 import Blog from "../components/Blog";
+
+const images = [
+  "image1.jpg",
+  "image2.jpg",
+  "image3.jpg"
+];
 
 const Home = () => {
   useEffect(() => {
@@ -29,7 +35,15 @@ const Home = () => {
       });
     };
   }, []);
-  
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); // Change image every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="home">
@@ -65,7 +79,29 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
+      <section class="image-section">
+        <img src="your-image.jpg" alt="Description of Image"/>
+    </section>
+    <section className="introduction">
+      <div className="intro-text">
+        <p>
+          Mega G Techniques is a cutting-edge 3D printing and Renewable energy niche
+          company dedicated to transforming ideas into tangible products. Our mission
+          is simply to deliver innovative, high-quality, and customizable 3D printable
+          solutions integrated with electronics and heavy current products (Renewable
+          energy) to produce extraordinary functional solutions.
+        </p>
+        <p>
+          We do multi-skills service and product delivery such as Electricity installations
+          (House wiring) and repairs, 3D graphics design, and Printing. We house skills such
+          as electrical and Mechanical Engineering, 3D graphics design, 3D printing, and
+          Renewable energy technology.
+        </p>
+      </div>
+      <div className="intro-slider">
+        <img src={images[currentImage]} alt="Sliding showcase" className="intro-img" />
+      </div>
+    </section>
       <Blog/>
 
 
