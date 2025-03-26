@@ -89,9 +89,9 @@ const Services = () => {
           <div className="service-content">
             <h2>Renewable Energy</h2>
             <ul>
-              <li><strong>Solar panel installations and solutions.</strong></li>
-              <li><strong>Energy audits and consultations.</strong></li>
-              <li><strong>Sustainable energy storage options.</strong></li>
+              <li><strong>.</strong></li>
+              <li><strong>.</strong></li>
+              <li><strong>.</strong></li>
             </ul>
           </div>
         </div>

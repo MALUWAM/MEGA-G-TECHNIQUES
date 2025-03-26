@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import "./Home.css"; // Import CSS for styling
 import Blog from "../components/Blog";
 
-import solar from "../assets/PRESENTATION/WhatsApp Image 2024-12-20 at 13.59.27.jpeg";
+import solar from "../assets/3D PRINTING/IMG_20220519_092642.jpg";
 import printing from "../assets/PRESENTATION/WhatsApp Image 2025-03-03 at 20.27.11 (1).jpeg";
-import graphics from "../assets/graphics.jpg";
+import graphics from "../assets/RENEWABLE ENERGY GEN PROJECT & ELECTRIC MOBILITY/WhatsApp Image 2025-03-03 at 20.32.25 (1).jpeg";
 import main from "../assets/PRESENTATION/WhatsApp Image 2025-03-24 at 12.49.27_4930bad5.jpg";
 
 const images = [solar, graphics, printing];
