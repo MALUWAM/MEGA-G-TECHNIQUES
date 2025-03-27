@@ -1,46 +1,65 @@
-import React, { useEffect } from "react";
-import "./Services.css"; // Import CSS for styling
+import React, { useState, useEffect } from "react";
+import "./Services.css";
+import { HiArrowCircleRight, HiArrowCircleLeft } from "react-icons/hi";
 
-// Import images
-import electrical from "../assets/Industrial and residential electrical installations.jpeg";
-import printing from "../assets/download.jpg";
-import graphics from "../assets/graphics.jpg";
-import solar from "../assets/Solar.jpg";
+// Import all images from their respective folders
+const importAll = (r) => r.keys().map(r);
+const electricalImages = importAll(require.context("../assets/ELECTRICITY INSTATLLATIONS", false, /\.(png|jpe?g|svg)$/));
+const printingImages = importAll(require.context("../assets/3D PRINTING", false, /\.(png|jpe?g|svg)$/));
+const graphicsImages = importAll(require.context("../assets/3D GRAPHICS DESIGN", false, /\.(png|jpe?g|svg)$/));
+const renewableImages = importAll(require.context("../assets/RENEWABLE ENERGY GEN PROJECT & ELECTRIC MOBILITY", false, /\.(png|jpe?g|svg)$/));
+
+const ImageGallery = ({ images }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Auto-slide effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); // Auto-slide every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [images.length]); // Ensure it updates if images change
+
+  // Manual controls
+  const nextImage = () => setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  const prevImage = () => setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+
+  return (
+    <div className="image-gallery">
+      <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} width="200" />
+      <div>
+        <button onClick={prevImage}><HiArrowCircleLeft /></button>
+        <button onClick={nextImage} style={{ marginLeft: "10px" }}><HiArrowCircleRight /></button>
+      </div>
+    </div>
+  );
+};
 
 const Services = () => {
   // Scroll animation effect
   useEffect(() => {
     const elements = document.querySelectorAll(".scroll-animate");
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate");
-          } else {
-            entry.target.classList.remove("animate");
-          }
+          entry.isIntersecting ? entry.target.classList.add("animate") : entry.target.classList.remove("animate");
         });
       },
       { threshold: 0.2 }
     );
-
     elements.forEach((el) => observer.observe(el));
-
-    return () => {
-      elements.forEach((el) => observer.unobserve(el));
-    };
+    return () => elements.forEach((el) => observer.unobserve(el));
   }, []);
 
   return (
     <section className="ourServices">
       <h1 className="title">MEGA G TECHNIQUES</h1>
       <div className="service-grid">
+        
         {/* Electrical Solutions */}
         <div className="service-card scroll-animate">
-          <div className="service-image">
-            <img src={electrical} alt="Electrical Solutions" />
-          </div>
+          <div className="service-image"><ImageGallery images={electricalImages} /></div>
           <div className="service-content">
             <h2>Electrical Solutions</h2>
             <ul>
@@ -53,9 +72,7 @@ const Services = () => {
 
         {/* 3D Printing */}
         <div className="service-card scroll-animate">
-          <div className="service-image">
-            <img src={printing} alt="3D Printing" />
-          </div>
+          <div className="service-image"><ImageGallery images={printingImages} /></div>
           <div className="service-content">
             <h2>3D Printing</h2>
             <ul>
@@ -68,9 +85,7 @@ const Services = () => {
 
         {/* 3D Graphic Design */}
         <div className="service-card scroll-animate">
-          <div className="service-image">
-            <img src={graphics} alt="3D Graphic Design" />
-          </div>
+          <div className="service-image"><ImageGallery images={graphicsImages} /></div>
           <div className="service-content">
             <h2>3D Graphic Design</h2>
             <ul>
@@ -83,18 +98,17 @@ const Services = () => {
 
         {/* Renewable Energy */}
         <div className="service-card scroll-animate">
-          <div className="service-image">
-            <img src={solar} alt="Renewable Energy" />
-          </div>
+          <div className="service-image"><ImageGallery images={renewableImages} /></div>
           <div className="service-content">
             <h2>Renewable Energy</h2>
             <ul>
-              <li><strong>.</strong></li>
-              <li><strong>.</strong></li>
-              <li><strong>.</strong></li>
+              <li><strong>Solar panel installations.</strong></li>
+              <li><strong>Electric mobility solutions.</strong></li>
+              <li><strong>Energy storage systems.</strong></li>
             </ul>
           </div>
         </div>
+
       </div>
     </section>
   );
