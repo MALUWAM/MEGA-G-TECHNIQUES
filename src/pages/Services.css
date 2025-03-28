@@ -1,6 +1,4 @@
 /* General styling for the services section */
-
-
 .ourServices {
   font-family: Arial, sans-serif;
   min-height: 100vh;
@@ -10,7 +8,9 @@
   align-items: center;
   text-align: center;
   padding: 5vh 5%;
-  background-image:url(../assets/Your\ paragraph\ text\ \(1\).png) ;
+  background-image: url(../assets/Your\ paragraph\ text\ \(1\).png);
+  background-size: cover;
+  background-position: center;
 }
 
 /* Title Styling */
@@ -28,6 +28,7 @@
   gap: 20px;
   width: 100%;
   max-width: 1200px;
+  padding: 10px;
 }
 
 /* Service Card */
@@ -40,11 +41,12 @@
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
   transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Service Content */
@@ -72,11 +74,34 @@
 }
 
 /* Service Image */
+.service-image {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .service-image img {
   width: 100%;
-  height: 200px;
+  height: 250px;
+  max-width: 400px;
   border-radius: 10px;
   object-fit: cover;
+}
+
+/* Navigation Buttons */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #000000;
+  transition: transform 0.2s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.2);
 }
 
 /* Scroll Animation */
@@ -91,12 +116,8 @@
   transform: translateY(0);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .service-grid {
-    grid-template-columns: 1fr;
-  }
-
+/* 📱 Mobile & Tablet Responsive Design */
+@media (max-width: 1024px) {
   .title {
     font-size: 2rem;
   }
@@ -107,5 +128,37 @@
 
   .service-content ul li {
     font-size: 0.95rem;
+  }
+
+  .service-image img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-image img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .service-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .service-content ul li {
+    font-size: 0.9rem;
+  }
+
+  .service-image img {
+    height: 150px;
   }
 }

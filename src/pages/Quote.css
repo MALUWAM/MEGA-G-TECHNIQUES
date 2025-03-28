@@ -10,6 +10,7 @@
   .quote-form {
     display: flex;
     flex-direction: column;
+    background-image: url();
     gap: 15px;
   }
   
